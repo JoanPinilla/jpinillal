@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #00235c;
+    color: white;
+}
+
+.NAME {
+    text-align: center;
+    font-size: 8vw;
+}
+
+.TITLE{
+    text-align: center;
+    font-size: 6vw;
+}
+
+.HEADER_LIST li{
+    display: inline;
+    font-size: 4vw;
+}
+
+.FOOTER {
+    font-size: 3vw;
+    text-align: center;
+}
