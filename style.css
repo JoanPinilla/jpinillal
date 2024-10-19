@@ -121,3 +121,55 @@ section p {
 @media (min-width: 600px) {
 
 }
+
+@media print {
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }    
+
+    header {
+        background-color: var(--MAIN-COLOR);
+        color: white;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .HOME {
+        padding-top: 1%;
+        padding-left: 1%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 1%;
+        flex-direction: row-reverse;
+    }
+
+    .PFP {
+        display: flex;
+        align-items: center;
+        width: 75%;
+        padding: 1%;
+        background-color: white;
+        align-items: baseline;
+    }
+
+    .DESCRIPTION {
+        text-align: center;
+        padding: 0% 1.5%;
+        font-size: 2.5vw;
+        font-weight: 500;
+    }
+
+    header button{
+        display: none;
+    }
+
+    .FOOTER {
+        display: none;
+    }
+}
