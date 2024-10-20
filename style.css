@@ -8,6 +8,12 @@
 :root{
     --MAIN-COLOR: #00235c;
     --SEC-COLOR: #001942;
+    --TITLE-COLOR: #00235c;
+    --CONTENT-COLOR: #133f8d49;
+}
+
+html {
+    padding: 0% 1%;
 }
 
 header {
@@ -15,17 +21,6 @@ header {
     color: white;
     align-items: center;
     justify-content: center;
-}
-
-.HOME {
-    padding-top: 1%;
-    padding-left: 1%;
-    display: grid;
-    grid-template-columns: 34% 33% 33%;
-    grid-template-rows: repeat(3, auto);
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 1%;
 }
 
 .NAME {
@@ -37,8 +32,26 @@ header {
 .TITLE{
     text-align: center;
     font-size: 4vw;
-    padding: 0.5% 0;
     margin: 0;
+}
+
+.EMAIL{
+    text-align: center;
+    font-size: 2vw;
+    margin: 0;
+    padding-bottom: 0.5%;
+}
+
+.HOME {
+    background-color: inherit;
+    padding-top: 1%;
+    padding-left: 1%;
+    display: grid;
+    grid-template-columns: 34% 33% 33%;
+    grid-template-rows: repeat(3, auto);
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1%;
 }
 
 .PFP {
@@ -56,19 +69,57 @@ header {
     width: 100%;
     border-radius: 2.5%;
     margin: auto auto;
+    padding: 0;
 }
 
 header button{
-    display: flex;
+    display: grid;
+    grid-template-columns: 25% 75%;
     align-items: center;
-    justify-content: center;
+    align-content: center;
+    justify-content: space-evenly;
     font-size: 3vw;
     width: 96%;
-    height: 96%;
+    height: 60%;
     border-radius: 1em;
-    border:  solid 1px var(--SEC-COLOR);
+    border:  solid 0.7vw var(--SEC-COLOR);
     font-weight: bold;
     margin: 2% 2%;
+}
+
+button figure {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 110%;
+    padding: 10%;
+    background-color: white;
+    border-radius: 50%;
+    border:  solid 0.7vw var(--SEC-COLOR);
+    position: relative;
+    left: -15%;
+}
+
+button figure img {
+    width: 90%;
+}
+
+button a {
+    padding-bottom: 2%;
+}
+
+button a:link {
+    color: black;
+    text-decoration: none;
+}
+
+button a:visited {
+    color: black;
+}
+
+button a:hover {
+    color: var(--MAIN-COLOR);
+    text-decoration: underline;
 }
 
 .DESCRIPTION {
@@ -85,11 +136,16 @@ section h2::before{
 }
 
 h2 {
+    background-color:  var(--TITLE-COLOR);
+    color: white;
     font-size: 3.5vw;
     font-weight: bold;
     margin-bottom: 2vw;
     margin-top: 2vw;
-    margin-left: 1vw;
+    margin-left: 0;
+    padding-left: 1vw;
+    font-size: 3.5vw;
+    font-weight: bold;
 }
 
 h3 {
@@ -102,6 +158,15 @@ h3 {
 h4 {
     font-size: 2.5vw;
     margin-left: 2vw;
+}
+
+section {
+    background-color:  var(--CONTENT-COLOR);
+    border-radius: 20px;   
+}
+
+.EXPERIENCIA, .ESTUDIOS, .SKILLS, .CURSOS :last-child {
+    padding-bottom: 1vw;
 }
 
 section p {
@@ -118,8 +183,24 @@ section p {
     margin-bottom: 2vw;
 }
 
-@media (min-width: 600px) {
+.FOOTER div {
+    margin-top: 1vw;
+}
 
+.FOOTER a {
+    display: block;
+    text-decoration: none;
+    font-size: 90%;
+    color: black;
+}
+
+.FOOTER a:visited {
+    color: black;
+}
+
+.FOOTER a:hover {
+    color: var(--MAIN-COLOR);
+    text-decoration: underline;
 }
 
 @media print {
@@ -131,6 +212,10 @@ section p {
         print-color-adjust: exact;
         -webkit-print-color-adjust: exact;
     }    
+
+    html {
+        padding: 0% 1%;
+    }
 
     header {
         background-color: var(--MAIN-COLOR);
@@ -161,8 +246,28 @@ section p {
     .DESCRIPTION {
         text-align: center;
         padding: 0% 1.5%;
-        font-size: 2.5vw;
+        font-size: 2.8vw;
         font-weight: 500;
+    }
+
+    h2 {
+        background-color:  var(--TITLE-COLOR);
+        color: white;
+        font-size: 3.5vw;
+        font-weight: bold;
+        margin-bottom: 2vw;
+        margin-top: 2vw;
+        margin-left: 0;
+        padding-left: 1vw;
+    }
+
+    section {
+        background-color:  var(--CONTENT-COLOR);
+        border-radius: 20px;   
+    }
+
+    section :last-child {
+        padding-bottom: 1vw;
     }
 
     header button{
