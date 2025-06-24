@@ -3,7 +3,7 @@ name: Translate CV to English
 on:
   push:
     branches: [main]
-    paths: ["cv_es.html"]
+    paths: ["index.html"]
 
 jobs:
   translate:
