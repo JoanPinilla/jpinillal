@@ -4,7 +4,7 @@ import os
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-with open("cv_es.html", "r", encoding="utf-8") as f:
+with open("index.html", "r", encoding="utf-8") as f:
     html_text = f.read()
 
 response = openai.chat.completions.create(
